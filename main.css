@@ -442,14 +442,20 @@ header .tablet_gnb .tablet_gnb_right .tablet_gnb_sub_menu{
 
 /* notice */
 
-.notice-line{
+.notice .notice-line{
 
 }
-.notice-left{
-
+.notice .notice-line .notice-left{
+  width: 50%;
+  background-color: #333;
+  position: absolute;
+  height: 62px;
 }
-.notice-right{
-
+.notice .notice-line .notice-right{
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  height: 62px;
 }
 .notice .notice-line .inner{
   height: 62px;
@@ -548,6 +554,9 @@ header .tablet_gnb .tablet_gnb_right .tablet_gnb_sub_menu{
   color : #333;
   cursor : pointer;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .notice .promotion .swiper .swiper-next{
@@ -1091,6 +1100,20 @@ position: relative;
 .sbRewards .inner .rewards-right .text-bottom p {
 font-size: 14px;
 }
+.toPosition{
+  opacity : 0;
+  transition : 2s;
+}
+.toPosition .toRight{
+  transform : translateX(-400px)
+}
+.show .toPosition .toRight{
+  opacity : 1;
+  transform : translateX(0)
+}
+.toPosition .toLeft{
+  transform : translateX(400px)
+}
 .off{
   display: none;
 }
@@ -1165,6 +1188,34 @@ header > .inner {
 }
 .bottom_ad{
   display: none;
+}/* notice-line */
+.notice .notice-line .inner{
+  display: block;
+  height: 124px;
+}
+.notice .notice-line .inner .inner_left{
+  width: 100%;
+}
+.notice .notice-line .inner .inner_right{
+  width: 100%;
+  height: 62px;
+}
+.notice .promotion{
+  width: 640px;
+  height: 450px;
+  margin: 0 auto;
+}
+.notice .promotion .swiper{
+  width: calc(500px * 3 + 30px);
+  left : 50%;
+  margin-left : calc((500px * 3 + 30px)/-2)
+}
+.notice .promotion .swiper-slide{
+  width: 500px;
+  height: 450px;
+}
+.notice .promotion .swiper-slide img{
+  width: 100%;
 }
 
 }
@@ -1209,6 +1260,24 @@ header > .inner {
 }
 .favorite{
   display: none;
+}
+
+/* notice */
+.notice .promotion{
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+}
+.notice .promotion .swiper{
+  width: calc(300% + 30px);
+  left : 50%;
+  margin-left: calc((300% + 30px)/-2);
+}
+.notice .promotion .swiper-slide{
+  width: 100%;
+}
+.notice .promotion .swiper-slide img{
+  width: 100%;
 }
 }
 @media screen and (max-width: 480px) {
